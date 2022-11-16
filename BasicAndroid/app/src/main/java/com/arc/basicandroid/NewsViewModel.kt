@@ -13,7 +13,7 @@ class NewsViewModel: ViewModel() {
     fun getListNews(){
         viewModelScope.launch {
             val response = Api.newsApiService.getTopHeadlines()
-            val article = response.aricles
+            val article = response.articles
 
             article.forEach {
                 Log.e("Response", it.toString())
